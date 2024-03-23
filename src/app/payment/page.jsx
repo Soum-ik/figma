@@ -139,9 +139,12 @@ export default function page() {
               <button className=" border-black border lg:px-14 px-5 py-2 lg:py-3  rounded-3xl">
                 Save
               </button>
-              <button  className="  bg-black text-white lg:px-14 px-5 py-2 lg:py-3  rounded-3xl">
+              <Link
+                href={"/payment/payment-method"}
+                className="  bg-black text-white lg:px-14 px-5 py-2 lg:py-3  rounded-3xl"
+              >
                 Confirm Payment
-              </button>
+              </Link>
             </div>
           </div>
         </div>

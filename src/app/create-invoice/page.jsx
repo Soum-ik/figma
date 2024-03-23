@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { BiMicrophone } from "react-icons/bi";
+import { BiMicrophone, BiPen, BiSearch } from "react-icons/bi";
 import { LuPrinter } from "react-icons/lu";
 
 export default function page() {
@@ -203,8 +203,11 @@ export default function page() {
           <div className=" py-8 border px-2 rounded-2xl">
             <div className="  flex items-center justify-between ">
               <h1> Preview Invoice</h1>
-              <div className="   p-3 md:p-4 lg:p-5 rounded-2xl bg-[#F8F8F8]">
-                <LuPrinter />
+              <div className=" flex  gap-10   p-3 md:p-4 lg:p-5 rounded-2xl ">
+                <LuPrinter className="bg-[#F8F8F8]" />
+                <Link href={'/edit-invoice'} className="bg-[#F8F8F8]">
+                  <BiPen />
+                </Link>
               </div>
             </div>
             <div className=" mt-10">

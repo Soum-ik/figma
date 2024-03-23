@@ -1,11 +1,14 @@
 "use client";
+import { useRouter } from "next/navigation";
 import { useRef } from "react";
 import { MdDone } from "react-icons/md";
 
 function Done({ onClose }) {
+  const route = useRouter();
   const divRef = useRef();
   const closeModel = (e) => {
     if (divRef.current === e.target) {
+      route.push("/");
       onClose();
     }
   };
@@ -56,10 +59,9 @@ function Done({ onClose }) {
             Send to mail
           </button>
           <button
-            // onClick={() => setClose()}
+            onClick={onClose}
             className=" md:px-[20px] md:py-[10px] py-[6px] shadow-2xl px-[14px] bg-black text-white rounded-lg"
           >
-            {" "}
             Claim Reward points
           </button>
         </div>
