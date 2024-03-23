@@ -1,8 +1,7 @@
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
-import { BiMicrophone } from "react-icons/bi";
-import { LuPrinter } from "react-icons/lu";
+import { BiCloset, BiSearch, BiWindowClose } from "react-icons/bi";
+import { CgClose } from "react-icons/cg";
 
 export default function page() {
   const invvoic = [
@@ -43,63 +42,28 @@ export default function page() {
       Amount: "$500",
     },
   ];
-
   const images = [
-    "/images/template.png",
-    "/images/template.png",
-    "/images/template.png",
-    "/images/template.png",
+    "/images/image1.png",
+    "/images/image2.png",
+    "/images/image3.png",
+    "/images/image4.png",
+    "/images/image5.png",
+    "/images/image6.png",
+    "/images/image7.png",
+    "/images/image8.png",
   ];
-
   return (
     <div className=" relative grid grid-cols-1 lg:grid-cols-3 ">
-      <div className=" lg:col-start-1 lg:col-end-3  lg:absolute -left-2 mb-10 ">
-        <div className=" pb-5">
-          <h1 className=" text-xl">Invoice</h1>
-          <h1 className=" text-base opacity-50">
-            Create a invoice for your patients
-          </h1>
-          <div className=" flex items-start gap-10 border-b my-5 pb-2">
-            <Link href={"/create-invoice"}>Create</Link>
-            <Link className="   border-b-black border-b-2" href={"/templates"}>
-              Templates
-            </Link>
+      <div className=" lg:col-start-1 lg:col-end-3   lg:absolute   mb-10 ">
+        <div className="   container  lg:min-w-[750px] mx-auto bg-white rounded-xl  px-5 py-5">
+          <div className=" border-b-2">
+            <h1 className="text-xl">Edit Invoice</h1>
+            <p className=" text-base opacity-50">
+              custom Invoice layout editing{" "}
+            </p>
           </div>
-        </div>
-        <div className=" container bg-white  rounded-xl lg:px-6 lg:py-5 px-4 py space-y-3 lg:space-y-5">
-          <div className=" grid  grid-cols-2 lg:grid-cols-3 ">
-            {images.map((src, index) => (
-              <Image
-                key={index}
-                src={src}
-                alt={`template-${index}`}
-                width={270}
-                height={300}
-              />
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* right side */}
-      <div className=" lg:col-start-3 lg:absolute lg:-left-[22px]">
-        <div className=" container lg:min-w-[450px] mx-auto bg-white rounded-xl  px-5 py-5">
-          <div className=" py-8 border px-2 rounded-2xl">
-            <div className="  flex items-center justify-between ">
-              <h1> Preview Invoice</h1>
-              <div className="   p-3 md:p-4 lg:p-5 rounded-2xl bg-[#F8F8F8]">
-                <LuPrinter />
-              </div>
-            </div>
-            <div className=" mt-10">
-              <Image
-                alt="band image"
-                src={"/images/mainlogo.png"}
-                width={120}
-                height={100}
-              />
-            </div>
-            <div className=" my-10 flex gap-20 font-semibold">
+          <div className=" py-8   px-2 rounded-2xl">
+            <div className=" my-10 flex items-center justify-center flex-1 gap-20 font-semibold">
               <h1>Dr. Vihang</h1>
               <h1>Jane Doe</h1>
             </div>
@@ -173,16 +137,47 @@ export default function page() {
               </div>
             </div>
           </div>
-          <div className=" flex items-center gap-5">
-            <button className=" flex items-end mt-10 border border-black rounded-xl px-5 py-2  ">
-              {" "}
-              Save
-            </button>
-            <button className=" flex items-end mt-10 bg-black rounded-xl px-5 py-2 text-white ">
-              {" "}
-              Save & Send
-            </button>
+        </div>
+      </div>
+
+      {/* right side */}
+      <div className=" lg:col-start-3 lg:min-w-[430px] lg:absolute lg:-left-[22px]">
+        <div className=" mx-auto bg-white rounded-xl w-full px-5 py-5">
+          <h1>Template Elements</h1>
+
+          <div className=" flex items-center justify-between w-full my-3 lg:px-4">
+            <div className="">
+              <div className=" border flex items-center justify-center px-3 py-2 mt-0 gap-2 rounded-md ">
+                <BiSearch />
+                <input
+                  type="text"
+                  placeholder=" search by patient name"
+                  className=" outline-none"
+                />
+              </div>
+            </div>
+            <div>
+              <CgClose />
+            </div>
           </div>
+
+          <div className=" grid grid-cols-2 gap-4 place-items-start place-content-start">
+            {images.map((image, index) => (
+              <Image
+                key={index}
+                src={image}
+                alt="image"
+                width={200}
+                className=" hover:cursor-pointer flex items-center
+                 justify-center"
+                height={200}
+              />
+            ))}
+          </div>
+
+          <button className=" bg-black px-10 py-3 rounded-3xl text-white text-xl mt-5 ">
+            Save
+          </button>
         </div>
       </div>
     </div>

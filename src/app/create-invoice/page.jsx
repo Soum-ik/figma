@@ -52,7 +52,12 @@ export default function page() {
             Create a invoice for your patients
           </h1>
           <div className=" flex items-start gap-10 border-b my-5 pb-2">
-            <Link href={"/create-invoice"}>Create</Link>
+            <Link
+              className="   border-b-black border-b-2"
+              href={"/create-invoice"}
+            >
+              Create
+            </Link>
             <Link href={"/templates"}>Templates</Link>
           </div>
         </div>
