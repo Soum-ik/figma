@@ -2,11 +2,10 @@
 import Done from "@/src/components/payment/done";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
-import { ImPriceTag } from "react-icons/im";
+import React, { useState } from "react"; 
 import { LuPrinter } from "react-icons/lu";
 
-export default function page() {
+export default function Page() {
   const [dot, setDot] = useState(true);
   const [showPayment, setShowPayment] = useState(false);
   function handleDot() {
