@@ -5,7 +5,7 @@ import { BiCloset, BiSearch, BiWindowClose } from "react-icons/bi";
 import { CgClose } from "react-icons/cg";
 import Edit from "@/src/components/edit/Edit";
 import Link from "next/link";
-export default function page() {
+export default function Page() {
   const [showPayment, setShowPayment] = useState(false);
 
   const invvoic = [
