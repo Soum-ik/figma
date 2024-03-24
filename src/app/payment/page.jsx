@@ -6,7 +6,6 @@ import { BiMicrophone, BiPen } from "react-icons/bi";
 import { LuPrinter } from "react-icons/lu";
 
 export default function page() {
- 
   return (
     <>
       <div className=" pb-5">
@@ -25,9 +24,9 @@ export default function page() {
               Payment Method
             </h1>
 
-            <div className=" flex  items-center justify-between gap-4">
+            <div className=" flex  items-center justify-start gap-10  ">
               <div className=" flex items-center justify-center lg:gap-3 md:gap-2 gap-[2px]">
-                <input type="checkbox" placeholder="sd" className=" rounded-" />
+                <input type="checkbox" placeholder="sd" className="" />
                 <Link
                   href={"/payment/payment-method"}
                   className=" text-xs lg:text-lg  md:text-sm "
@@ -37,15 +36,30 @@ export default function page() {
               </div>
               <div className=" flex items-center justify-center lg:gap-3 md:gap-2 gap-[2px]">
                 <input type="checkbox" placeholder="sd" />
-                <h1 className=" text-xs  md:text-sm">Debit Card</h1>
+                <Link
+                  href={"/payment/payment-method"}
+                  className=" text-xs lg:text-lg  md:text-sm "
+                >
+                  Net Bins
+                </Link>
               </div>
               <div className=" flex items-center justify-center lg:gap-3 md:gap-2 gap-[2px]">
                 <input type="checkbox" placeholder="sd" />
-                <h1 className="  text-xs  md:text-sm">Debit Card</h1>
+                <Link
+                  href={"/payment/payment-method"}
+                  className=" text-xs lg:text-lg  md:text-sm "
+                >
+                  Papyel
+                </Link>
               </div>
               <div className=" flex items-center justify-center lg:gap-3 md:gap-2 gap-[2px]">
                 <input type="checkbox" placeholder="sd" />
-                <h1 className=" text-xs  md:text-sm">Debit Card</h1>
+                <Link
+                  href={"/payment/payment-method"}
+                  className=" text-xs lg:text-lg  md:text-sm "
+                >
+                  Debit Card
+                </Link>
               </div>
             </div>
 
@@ -188,7 +202,7 @@ export default function page() {
                     ))}
                   </tbody>
                 </table>
- 
+
                 <div className="flex  my-5 gap-20">
                   <div className=" space-y-2">
                     <h3 className=" text-balance font-semibold">Subtotal</h3>
@@ -215,7 +229,6 @@ export default function page() {
             </div>
           </div>
         </div>
-
       </div>
     </>
   );
