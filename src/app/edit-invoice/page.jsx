@@ -59,9 +59,9 @@ export default function Page() {
   return (
     <>
       <div className=" container flex lg:items-start items-center mx-auto justify-between mb-3">
-        <div>
-          <h1 className=" lg:text-2xl">Invoice</h1>
-          <h1 className=" lg:text-xl">Invoice List</h1>
+        <div className=" space-y-5">
+          <h1 className=" lg:text-3xl">Invoice</h1>
+          <h1 className=" lg:text-xl opacity-50">Invoice List</h1>
         </div>
         <div>
           <button
@@ -77,7 +77,7 @@ export default function Page() {
           <div className="   container  lg:min-w-[750px] mx-auto bg-white rounded-xl  px-5 py-5">
             <div className=" border-b-2">
               <h1 className="text-xl">Edit Invoice</h1>
-              <p className=" text-base opacity-50">
+              <p className=" text-base opacity-50 my-2">
                 custom Invoice layout editing{" "}
               </p>
             </div>
@@ -192,6 +192,7 @@ export default function Page() {
                   height={200}
                 />
               ))}
+              
             </div>
 
             <button className=" bg-black px-10 py-3 rounded-3xl text-white text-xl mt-5 ">

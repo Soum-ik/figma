@@ -21,7 +21,7 @@ export default function RootLayout({
         <Navbar />
         <div className=" flex container">
           <Sidebar />
-          <div className=" bg-pink-300/10 mt-5 container lg:min-w-[1270px] min-h-screen rounded-xl pt-16 px-7">
+          <div className=" bg-[#fff9f1] mt-5 container lg:min-w-[1270px] min-h-screen rounded-xl pt-16 px-7">
             {children}
           </div>
         </div>
