@@ -81,4 +81,8 @@ export const invvoic = [
   },
 ];
 
- 
+export const payment = [
+  "/images/one.png",
+  "/images/two.png",
+  "/images/three.png",
+]

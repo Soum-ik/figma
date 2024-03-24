@@ -1,4 +1,4 @@
-import { invvoic } from "@/src/components/data";
+import { invvoic, payment } from "@/src/components/data";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -20,6 +20,18 @@ export default function page() {
             className=" container bg-white lg:max-w-[750px] rounded-xl lg:px-6 lg:py-5 px-4 py-5
            space-y-5 lg:space-y-10"
           >
+            <div className=" flex items-center space-x-7 sm:space-x-14 md:space-x-16 lg:space-x-20">
+              {payment.map((image, index) => (
+                <Image
+                key={index}
+                  src={image}
+                  width={120}
+                  height={10}
+                  alt="iamge"
+                  className=" w-[40px] sm:w-[60px] md:w-[70px] lg:w-[100px]"
+                />
+              ))}
+            </div>
             <h1 className="   text-sm sm:text-sm md:text-lg  lg:text-xl">
               Payment Method
             </h1>
@@ -134,10 +146,7 @@ export default function page() {
               <div className="  flex items-center justify-between ">
                 <h1> Preview Invoice</h1>
                 <div className="flex  gap-10   p-3 md:p-4 lg:p-5 rounded-2xl">
-                  <Link
-                    href={"/"}
-                    className="bg-[#F8F8F8] p-3 rounded-lg"
-                  >
+                  <Link href={"/"} className="bg-[#F8F8F8] p-3 rounded-lg">
                     <LuPrinter />
                   </Link>
                   <Link

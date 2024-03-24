@@ -1,8 +1,9 @@
 "use client";
+import { payment } from "@/src/components/data";
 import Done from "@/src/components/payment/done";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react"; 
+import React, { useState } from "react";
 import { LuPrinter } from "react-icons/lu";
 
 export default function Page() {
@@ -63,6 +64,18 @@ export default function Page() {
             className=" container bg-white lg:min-w-[750px] rounded-xl lg:px-6 lg:py-5 px-4 py-5
            space-y-5 lg:space-y-10"
           >
+            <div className=" flex items-center space-x-7 sm:space-x-14 md:space-x-16 lg:space-x-20">
+              {payment.map((image, index) => (
+                <Image
+                  key={index}
+                  src={image}
+                  width={120}
+                  height={10}
+                  alt="iamge"
+                  className=" w-[40px] sm:w-[60px] md:w-[70px] lg:w-[100px]"
+                />
+              ))}
+            </div>
             <h1 className="   text-sm sm:text-sm md:text-lg  lg:text-xl">
               Payment Method
             </h1>
