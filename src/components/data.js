@@ -50,6 +50,16 @@ export const data = [
   },
 ];
 
+export const images = [
+  "/images/image1.png",
+  "/images/image2.png",
+  "/images/image3.png",
+  "/images/image4.png",
+  "/images/image5.png",
+  "/images/image6.png",
+  "/images/image7.png",
+  "/images/image10.png",
+];
 export const invvoic = [
   {
     name: "Vitamin A Night Serum",
