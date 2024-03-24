@@ -211,8 +211,8 @@ export default function Home() {
                 <h1>Dr. Vihang</h1>
                 <h1>Jane Doe</h1>
               </div>
-              <div className=" flex items-center justify-center sm:items-start sm:justify-start  lg:items-end lg:justify-end rounded-md flex-1 flex-col">
-                <table className=" border rounded-xl">
+              <div className=" flex items-end justify-end rounded-md flex-1 flex-col">
+                <table className="min-w-full border rounded-xl">
                   <thead className=" bg-black    text-white ">
                     <tr className=" py-10   rounded-md">
                       <th className=" px-2 py-3  rounded-tl-xl   md:px-5 md:py-3 border-b-2  text-left text-xs font-semibold uppercase tracking-wider">
@@ -232,7 +232,7 @@ export default function Home() {
                   <tbody className=" ">
                     {invvoic.map((data, index) => (
                       <tr key={index}>
-                        <td className="lg:px-5 lg:py-3  px-2 py-1  border-gray-200 bg-white text-sm">
+                        <td className="lg:px-5 lg:py-3  sm:px-3 sm:py-3 px-2 py-2  border-gray-200 bg-white text-sm">
                           <div className="flex items-center">
                             <div className="lg:ml-1">
                               <p className="text-gray-900 whitespace-no-wrap">
@@ -241,17 +241,17 @@ export default function Home() {
                             </div>
                           </div>
                         </td>
-                        <td className="lg:px-5 lg:py-3  px-2 py-1 border-gray-200 bg-white text-sm">
+                        <td className="lg:px-5 lg:py-3  sm:px-3 sm:py-3 px-2 py-2 border-gray-200 bg-white text-sm">
                           <p className="text-gray-900 whitespace-no-wrap">
                             {data.Rate}
                           </p>
                         </td>
-                        <td className="lg:px-5 lg:py-3  px-2 py-1  border-gray-200 bg-white text-sm">
+                        <td className="lg:px-5 lg:py-3  sm:px-3 sm:py-3 px-2 py-2  border-gray-200 bg-white text-sm">
                           <p className="text-gray-900 whitespace-no-wrap">
                             {data.Qty}
                           </p>
                         </td>
-                        <td className="lg:px-5 lg:py-3  px-2 py-1  border-gray-200 bg-white text-sm">
+                        <td className="lg:px-5 lg:py-3  sm:px-3 sm:py-3 px-2 py-2  border-gray-200 bg-white text-sm">
                           <p className="text-gray-900 whitespace-no-wrap">
                             {data.Amount}
                           </p>
@@ -262,7 +262,7 @@ export default function Home() {
                 </table>
 
                 {/* perfect */}
-                <div className="flex   my-5 gap-20">
+                <div className="flex  my-5 gap-20">
                   <div className=" space-y-2">
                     <h3 className=" text-balance font-semibold">Subtotal</h3>
                     <h3>tax 5%</h3>
@@ -278,7 +278,7 @@ export default function Home() {
                 <div className=" hidden lg:block my-2 text-right bg-black/50 w-full h-[1px]">
                   Total <span className=" ml-[140px]"> $500</span>
                 </div>
-                <div className=" p-5">
+                <div className=" min-w-full lg:px-5 lg:mt-5 py-3 px-2 rounded-md bg-[#F8F8F8]">
                   <h1 className="  font-bold">Notes/Terms</h1>
                   <p className=" opacity-50">
                     Lorem ipsum dolor sit amet. Sit eaque assumenda qui.
