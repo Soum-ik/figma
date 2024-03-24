@@ -74,29 +74,11 @@ export default function Home() {
       Qty: "2",
       Amount: "$500",
     },
-    {
-      name: "Vitamin A Night Serum",
-      Rate: "$50$",
-      Qty: "2",
-      Amount: "$500",
-    },
-    {
-      name: "Vitamin A Night Serum",
-      Rate: "$50$",
-      Qty: "2",
-      Amount: "$500",
-    },
-    {
-      name: "Vitamin A Night Serum",
-      Rate: "$50$",
-      Qty: "2",
-      Amount: "$500",
-    },
   ];
 
   return (
     <div className="container text-[#4C4D4F]  ">
-      <div className=" px-7 mb-10">
+      <div className=" lg:px-7 mb-10">
         <h1 className=" text-xl font-semibold mb-5">Invoice</h1>
         <p>Invoice list</p>
       </div>
@@ -127,7 +109,7 @@ export default function Home() {
 
               <div className="flex items-center  mb-1 sm:mb-0 rounded-xl">
                 <div>Select Date:</div>
-                <div className="relative ml-10 z-50 border-red-700 border">
+                <div className="relative ml-10 z-50 ">
                   <select className=" h-full rounded-l border block appearance-none w-full bg-white border-gray-400 text-gray-700 py-2 px-4 pr-8 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
                     <option>26aug</option>
                   </select>
@@ -202,7 +184,6 @@ export default function Home() {
                     ))}
                   </tbody>
                 </table>
-                <div className=" text-center py-5">See more....</div>
               </div>
             </div>
           </div>
@@ -210,8 +191,8 @@ export default function Home() {
 
         {/* right part */}
         <div>
-          <div className=" container lg:min-w-[450px] mx-auto bg-white rounded-xl lg:ml-5 lg:mr-5 px-5 py-5">
-            <div className=" py-8 border px-2 rounded-2xl">
+          <div className=" container lg:min-w-[450px] mx-auto bg-white rounded-xl lg:ml-5 lg:mr-5 px-3 py-3">
+            <div className=" lg:py-8 py-3 px-2 border lg:px-5 rounded-2xl">
               <div className="  flex items-center justify-between ">
                 <h1> Preview Invoice</h1>
                 <div className="   p-3 md:p-4 lg:p-5 rounded-2xl bg-[#F8F8F8]">
@@ -230,20 +211,20 @@ export default function Home() {
                 <h1>Dr. Vihang</h1>
                 <h1>Jane Doe</h1>
               </div>
-              <div className=" flex items-center justify-center flex-1 flex-col">
-                <table>
-                  <thead className=" bg-black  rounded-md text-white ">
+              <div className=" flex items-center justify-center sm:items-start sm:justify-start  lg:items-end lg:justify-end rounded-md flex-1 flex-col">
+                <table className=" border rounded-xl">
+                  <thead className=" bg-black    text-white ">
                     <tr className=" py-10   rounded-md">
-                      <th className="px-5 py-3 border-b-2  text-left text-xs font-semibold uppercase tracking-wider">
+                      <th className=" px-2 py-3  rounded-tl-xl   md:px-5 md:py-3 border-b-2  text-left text-xs font-semibold uppercase tracking-wider">
                         item
                       </th>
-                      <th className="px-5 py-3 border-b-2  text-left text-xs font-semibold uppercase tracking-wider">
+                      <th className=" px-2 py-3   md:px-5 md:py-3 border-b-2  text-left text-xs font-semibold uppercase tracking-wider">
                         Rate
                       </th>
-                      <th className="px-5 py-3 border-b-2  text-left text-xs font-semibold uppercase tracking-wider">
+                      <th className=" px-2 py-3   md:px-5 md:py-3 border-b-2  text-left text-xs font-semibold uppercase tracking-wider">
                         Qty
                       </th>
-                      <th className="px-5 py-3 border-b-2  text-left text-xs font-semibold uppercase tracking-wider">
+                      <th className=" px-2 py-3 rounded-tr-xl  md:px-5 md:py-3 border-b-2  text-left text-xs font-semibold uppercase tracking-wider">
                         Amount
                       </th>
                     </tr>
@@ -251,26 +232,26 @@ export default function Home() {
                   <tbody className=" ">
                     {invvoic.map((data, index) => (
                       <tr key={index}>
-                        <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                        <td className="lg:px-5 lg:py-3  px-2 py-1  border-gray-200 bg-white text-sm">
                           <div className="flex items-center">
-                            <div className="ml-1">
+                            <div className="lg:ml-1">
                               <p className="text-gray-900 whitespace-no-wrap">
                                 {data.name}
                               </p>
                             </div>
                           </div>
                         </td>
-                        <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                        <td className="lg:px-5 lg:py-3  px-2 py-1 border-gray-200 bg-white text-sm">
                           <p className="text-gray-900 whitespace-no-wrap">
                             {data.Rate}
                           </p>
                         </td>
-                        <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                        <td className="lg:px-5 lg:py-3  px-2 py-1  border-gray-200 bg-white text-sm">
                           <p className="text-gray-900 whitespace-no-wrap">
                             {data.Qty}
                           </p>
                         </td>
-                        <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                        <td className="lg:px-5 lg:py-3  px-2 py-1  border-gray-200 bg-white text-sm">
                           <p className="text-gray-900 whitespace-no-wrap">
                             {data.Amount}
                           </p>
@@ -279,7 +260,9 @@ export default function Home() {
                     ))}
                   </tbody>
                 </table>
-                <div className="flex items-end justify-end  mr-16 my-5 gap-20">
+
+                {/* perfect */}
+                <div className="flex   my-5 gap-20">
                   <div className=" space-y-2">
                     <h3 className=" text-balance font-semibold">Subtotal</h3>
                     <h3>tax 5%</h3>
@@ -292,6 +275,9 @@ export default function Home() {
                     <h3>$107</h3>
                   </div>
                 </div>
+                <div className=" hidden lg:block my-2 text-right bg-black/50 w-full h-[1px]">
+                  Total <span className=" ml-[140px]"> $500</span>
+                </div>
                 <div className=" p-5">
                   <h1 className="  font-bold">Notes/Terms</h1>
                   <p className=" opacity-50">
@@ -300,13 +286,9 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <Link
-              href={"/create-invoice"}
-               
-            >
+            <Link href={"/create-invoice"}>
               <p className=" flex items-end mt-10 bg-black rounded-full p-4 text-white ">
-
-              Create New Invoice
+                Create New Invoice
               </p>
             </Link>
           </div>
