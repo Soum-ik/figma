@@ -58,15 +58,15 @@ export default function page() {
                 />
               </div>
             </div>
-            <div className="border rounded-xl px-5 py-5">
+            <div className="hidden lg:block border rounded-xl px-5 py-5 bg-[#4C4D4F]/5">
               <div className=" border-b  flex items-center ">
                 <h1 className=" text-lg opacity-50">Treatments</h1>
                 <h1 className=" text-lg ml-20 opacity-50">Amount</h1>
               </div>
               <div className=" flex py-2 items-center justify-between ">
                 <div className="flex gap-3">
-                  <h1>Anti wrinkle treatment</h1>
-                  <h1>$1480</h1>
+                  <h1 className=" font-semibold">Anti wrinkle treatment</h1>
+                  <h1 className=" font-semibold">$1480</h1>
                 </div>
 
                 <div className=" flex gap-3">
@@ -79,58 +79,68 @@ export default function page() {
                 </div>
               </div>
             </div>
-            <div className="border rounded-xl px-5 py-5">
+
+            <div className="border rounded-xl px-5 py-5 bg-[#4C4D4F]/5">
               <div className=" border-b  flex items-center  justify-between">
-                <h1 className="text-base lg:text-lg opacity-50">Treatments</h1>
-                <h1 className="text-base lg:text-lg  opacity-50">Amount</h1>
-                <h1 className="text-base lg:text-lg opacity-50">Treatments</h1>
-                <h1 className="text-base lg:text-lg  opacity-50">Amount</h1>
+                <h1 className="text-sm lg:text-lg opacity-50">Treatments</h1>
+                <h1 className="text-sm lg:text-lg  opacity-50">Amount</h1>
+                <h1 className="text-sm lg:text-lg opacity-50">Treatments</h1>
+                <h1 className="text-sm lg:text-lg  opacity-50">Amount</h1>
               </div>
               <div className=" flex py-2  justify-between flex-col ">
                 <div className="flex gap-3 items-start justify-between">
-                  <h1 className=" text-base">Anti wrinkle treatment</h1>
-                  <h1 className=" text-base">$1480</h1>
-                  <h1 className=" text-base">Anti wrinkle treatment</h1>
-                  <h1 className=" text-base">$1480</h1>
+                  <h1 className=" text-xs sm:text-sm lg:text-base font-semibold">
+                    Anti wrinkle treatment
+                  </h1>
+                  <h1 className=" text-xs sm:text-sm lg:text-base">$1480</h1>
+                  <h1 className=" text-xs sm:text-sm lg:text-base">
+                    Anti wrinkle treatment
+                  </h1>
+                  <h1 className=" text-xs sm:text-sm lg:text-base">$1480</h1>
                 </div>
 
-                <div className="  items-end justify-end mt-5 flex gap-3">
-                  <button className=" bg-black text-white lg:px-16 px-6 py-2 text-base md:text-xl rounded-3xl">
+                <div className="  lg:items-end lg:justify-end items-start justify-start mt-5 flex gap-3">
+                  <button className=" bg-black  text-white lg:px-16 px-10 py-2 text-xs sm:text-sm lg:text-xl md:text-lg rounded-3xl">
                     add
                   </button>
-                  <button className=" border-[#E23943] border   lg:px-7 px-2 py-2 text-base  md:text-xl rounded-3xl">
+                  <button className=" border-[#E23943] border   lg:px-7 px-10 py-1 text-xs sm:text-sm lg:text-xl  md:text-lg   rounded-3xl">
                     remove
                   </button>
                 </div>
               </div>
             </div>
-            <div className="border rounded-xl px-5 py-5">
+            <div className="border rounded-xl px-5 py-5 bg-[#4C4D4F]/5">
               <div className=" border-b  flex items-center  justify-between">
-                <h1 className=" text-lg opacity-50">Skincare Items</h1>
-                <h1 className=" text-lg  opacity-50">Rate</h1>
-                <h1 className=" text-lg opacity-50">Qty</h1>
-                <h1 className=" text-lg  opacity-50">Amount</h1>
+                <h1 className="text-sm lg:text-lg opacity-50">Treatments</h1>
+                <h1 className="text-sm lg:text-lg  opacity-50">Amount</h1>
+                <h1 className="text-sm lg:text-lg opacity-50">Treatments</h1>
+                <h1 className="text-sm lg:text-lg  opacity-50">Amount</h1>
               </div>
               <div className=" flex py-2  justify-between flex-col ">
                 <div className="flex gap-3 items-start justify-between">
-                  <h1>Anti wrinkle treatment</h1>
-                  <h1>$1480</h1>
-                  <h1>Anti wrinkle treatment</h1>
-                  <h1>$1480</h1>
+                  <h1 className=" text-xs sm:text-sm lg:text-base font-semibold">
+                    Anti wrinkle treatment
+                  </h1>
+                  <h1 className=" text-xs sm:text-sm lg:text-base">$1480</h1>
+                  <h1 className=" text-xs sm:text-sm lg:text-base">
+                    Anti wrinkle treatment
+                  </h1>
+                  <h1 className=" text-xs sm:text-sm lg:text-base">$1480</h1>
                 </div>
 
-                <div className="  items-end justify-end mt-5 flex gap-3">
-                  <button className=" bg-black text-white lg:px-16 px-6 py-2 text-base md:text-xl rounded-3xl">
+                <div className="  lg:items-end lg:justify-end items-start justify-start mt-5 flex gap-3">
+                  <button className=" bg-black  text-white lg:px-16 px-10 py-2 text-xs sm:text-sm lg:text-xl md:text-lg rounded-3xl">
                     add
                   </button>
-                  <button className=" border-[#E23943] border lg:px-7 px-2 py-2 text-base  md:text-xl rounded-3xl">
+                  <button className=" border-[#E23943] border   lg:px-7 px-10 py-1 text-xs sm:text-sm lg:text-xl  md:text-lg   rounded-3xl">
                     remove
                   </button>
                 </div>
               </div>
             </div>
+             
 
-            <div className=" flex  flex-col lg:flex-row  justify-between">
+            <div className=" flex  flex-col lg:flex-row  justify-between py-5">
               <div>
                 <h1> Add Notes/ Terms</h1>
                 <div className=" border flex items-center justify-center rounded-lg px-2">
@@ -144,17 +154,17 @@ export default function page() {
                 </div>
               </div>
               <div className=" flex flex-1 items-end justify-end gap-10 pt-3">
-                <div className=" space-y-5">
+                <div className=" space-y-2 md:space-y-5">
                   <h1 className=" opacity-50">Subtotal</h1>
                   <h1 className=" opacity-50">Transaction Fee 5%</h1>
                   <h1 className=" opacity-50">Discount 10%</h1>
-                  <h1>Total</h1>
+                  <h1 className=" text-lg font-medium">Total</h1>
                 </div>
-                <div className=" space-y-5">
+                <div className=" space-y-2 md:space-y-5">
                   <h1 className=" opacity-50">180</h1>
                   <h1 className=" opacity-50">1454</h1>
                   <h1 className=" opacity-50">214</h1>
-                  <h1>21</h1>
+                  <h1 className="text-lg font-medium">21</h1>
                 </div>
               </div>
             </div>
