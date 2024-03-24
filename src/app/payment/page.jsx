@@ -134,9 +134,16 @@ export default function page() {
               <div className="  flex items-center justify-between ">
                 <h1> Preview Invoice</h1>
                 <div className="flex  gap-10   p-3 md:p-4 lg:p-5 rounded-2xl">
-                  <LuPrinter />
-
-                  <Link href={"/edit-invoice"} className="bg-[#F8F8F8]">
+                  <Link
+                    href={"/"}
+                    className="bg-[#F8F8F8] p-3 rounded-lg"
+                  >
+                    <LuPrinter />
+                  </Link>
+                  <Link
+                    href={"/edit-invoice"}
+                    className="bg-[#F8F8F8] p-3 rounded-lg"
+                  >
                     <BiPen />
                   </Link>
                 </div>
