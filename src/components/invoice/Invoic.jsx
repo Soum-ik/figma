@@ -2,15 +2,21 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { LuPrinter } from "react-icons/lu";
-import { invvoic} from "@/src/components/data" 
-function Invoic({ data }) {
+import { invvoic } from "@/src/components/data";
+import { BiPen } from "react-icons/bi";
+function Invoic({ data, pen, save }) {
   return (
     <div className=" container lg:min-w-[450px] mx-auto bg-white rounded-xl lg:ml-5 lg:mr-5 px-3 py-3">
       <div className=" lg:py-8 py-3 px-2 border lg:px-5 rounded-2xl">
         <div className="  flex items-center justify-between ">
           <h1> Preview Invoice</h1>
-          <div className="   p-3 md:p-4 lg:p-5 rounded-2xl bg-[#F8F8F8]">
+          <div className="flex  gap-10   p-3 md:p-4 lg:p-5 rounded-2xl">
             <LuPrinter />
+            {pen && (
+              <Link href={"/edit-invoice"} className="bg-[#F8F8F8]">
+                <BiPen />
+              </Link>
+            )}
           </div>
         </div>
         <div className=" mt-10">
@@ -100,11 +106,23 @@ function Invoic({ data }) {
           </div>
         </div>
       </div>
-      <Link href={"/create-invoice"}>
-        <p className=" flex items-end mt-10 bg-black rounded-full p-4 text-white ">
-          {data}
-        </p>
-      </Link>
+      {save ? (
+        <div className=" flex items-center gap-5">
+          <button className=" flex items-end mt-10 border border-black rounded-xl px-5 py-2  ">
+            {save}
+          </button>
+          <button className=" flex items-end mt-10 bg-black rounded-xl px-5 py-2 text-white ">
+            {" "}
+            {data}
+          </button>
+        </div>
+      ) : (
+        <Link href={"/create-invoice"}>
+          <button className=" flex items-end mt-10 bg-black rounded-xl px-5 py-2 text-white ">
+            {data}
+          </button>
+        </Link>
+      )}
     </div>
   );
 }

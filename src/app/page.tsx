@@ -116,7 +116,11 @@ export default function Home() {
 
         {/* right part */}
         <div>
-          <Invoice data={"Create New Invoice"} />
+          <Invoice
+            data={"Create New Invoice"}
+            pen={undefined}
+            save={undefined}
+          />
         </div>
       </div>
     </div>
